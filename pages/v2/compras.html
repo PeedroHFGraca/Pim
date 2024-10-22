@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras - Mush & Room</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5e4d7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4cab0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    color: #3d251f;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3d251f;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #d47c3a;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-compra {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 35%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-compra h2 {
+    text-align: center;
+    color: #3d251f;
+    margin-bottom: 20px;
+}
+
+.form-compra form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-compra label {
+    margin-bottom: 5px;
+    color: #3d251f;
+}
+
+.form-compra input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.cancelar {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.compras {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.compras h2 {
+    text-align: center;
+    color: #3d251f;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #f4cab0;
+    padding: 8px;
+    text-align: left;
+    color: #3d251f;
+}
+
+tbody td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f9e1d2;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+    transition: background-color 0.3s;
+}
+
+.excluir {
+    background-color: #cc3300;
+}
+
+.excluir:hover {
+    background-color: #b32400;
+}
+
+.alterar {
+    background-color: #f4b400;
+}
+
+.alterar:hover {
+    background-color: #e5a200;
+}
+
+.registrar {
+    background-color: #d47c3a;
+}
+
+.registrar:hover {
+    background-color: #c36528;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/cabecalho/mashroomBlack.png" alt="Mushroom logo">
+            <h1>Mush & Room</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Produção</a></li>
+                <li><a href="#">Fornecedores</a></li>
+                <li><a class="active" href="#">Compras</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-compra">
+            <h2>Cadastro de Compras</h2>
+            <form>
+                <label for="nome-compra">Nome do produto</label>
+                <input type="text" id="nome-compra" name="nome-compra">
+
+                <label for="produto">Produto comprado</label>
+                <input type="text" id="info-compra" name="info-compra">
+
+                <label for="quantidade-compra">Quantidade comprada</label>
+                <input type="number" id="quantidade-compra" name="quantidade-compra">
+
+                <label for="valor">Valor total</label>
+                <input type="number" id="valor" name="valor">
+
+                <div class="buttons">
+                    <button type="reset" class="cancelar">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="compras">
+            <h2>Compras</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do produto</th>
+                        <th>Produto comprado</th>
+                        <th>Quantidade comprada</th>
+                        <th>Valor total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cogumelo Shitake</td>
+                        <td>Comprado de Cogumelos LTDA</td>
+                        <td>100</td>
+                        <td>R$140,99</td>
+                    </tr>
+                    <tr>
+                        <td>Cogumelo Paris</td>
+                        <td>Comprado de Cogumelos LTDA</td>
+                        <td>150</td>
+                        <td>R$140,99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="action-buttons">
+                <button class="excluir">Excluir compra</button>
+                <button class="alterar">Alterar dados da compra</button>
+                <button class="registrar">Registrar compra</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

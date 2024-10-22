@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornecedores - Mush & Room</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5e4d7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4cab0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    color: #3d251f;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3d251f;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #d47c3a;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-fornecedor {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 35%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-fornecedor h2 {
+    text-align: center;
+    color: #3d251f;
+    margin-bottom: 20px;
+}
+
+.form-fornecedor form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-fornecedor label {
+    margin-bottom: 5px;
+    color: #3d251f;
+}
+
+.form-fornecedor input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.cancelar {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.fornecedores {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fornecedores h2 {
+    text-align: center;
+    color: #3d251f;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #f4cab0;
+    padding: 8px;
+    text-align: left;
+    color: #3d251f;
+}
+
+tbody td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f9e1d2;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+    transition: background-color 0.3s;
+}
+
+.excluir {
+    background-color: #cc3300;
+}
+
+.excluir:hover {
+    background-color: #b32400;
+}
+
+.alterar {
+    background-color: #f4b400;
+}
+
+.alterar:hover {
+    background-color: #e5a200;
+}
+
+.registrar {
+    background-color: #d47c3a;
+}
+
+.registrar:hover {
+    background-color: #c36528;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/cabecalho/mashroomBlack.png" alt="Mushroom logo">
+            <h1>Mush & Room</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Produção</a></li>
+                <li><a class="active" href="#">Fornecedores</a></li>
+                <li><a href="#">Compras</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-fornecedor">
+            <h2>Cadastro de Fornecedores</h2>
+            <form>
+                <label for="nome-fornecedor">Nome do fornecedor</label>
+                <input type="text" id="nome-fornecedor" name="nome-fornecedor">
+
+                <label for="produto-fornecedor">Nome do produto</label>
+                <input type="text" id="produto-fornecedor" name="produto-fornecedor">
+
+                <label for="cnpj-fornecedor">CNPJ</label>
+                <input type="text" id="cnpj-fornecedor" name="cnpj-fornecedor">
+
+                <label for="telefone-fornecedor">Telefone</label>
+                <input type="tel" id="telefone-fornecedor" name="telefone-fornecedor">
+
+                <div class="buttons">
+                    <button type="reset" class="cancelar">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="fornecedores">
+            <h2>Fornecedores</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do fornecedor</th>
+                        <th>Nome do produto</th>
+                        <th>CNPJ</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cogumelos LTDA</td>
+                        <td>Cogumelo Shitake</td>
+                        <td>87216288000114</td>
+                        <td>(11) 5921-4632</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="action-buttons">
+                <button class="excluir">Excluir fornecedor</button>
+                <button class="alterar">Alterar dados do fornecedor</button>
+                <button class="registrar">Registrar fornecedor</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

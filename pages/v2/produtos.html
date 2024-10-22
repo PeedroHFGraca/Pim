@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Mush & Room</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5e4d7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4cab0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    color: #3d251f;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3d251f;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #d47c3a;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-produto {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 35%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-produto h2 {
+    text-align: center;
+    color: #3d251f;
+    margin-bottom: 20px;
+}
+
+.form-produto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-produto label {
+    margin-bottom: 5px;
+    color: #3d251f;
+}
+
+.form-produto input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.cancelar {
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.produtos {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produtos h2 {
+    text-align: center;
+    color: #3d251f;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #f4cab0;
+    padding: 8px;
+    text-align: left;
+    color: #3d251f;
+}
+
+tbody td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f9e1d2;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+    transition: background-color 0.3s;
+}
+
+.excluir {
+    background-color: #cc3300;
+}
+
+.excluir:hover {
+    background-color: #b32400;
+}
+
+.alterar {
+    background-color: #f4b400;
+}
+
+.alterar:hover {
+    background-color: #e5a200;
+}
+
+.registrar {
+    background-color: #d47c3a;
+}
+
+.registrar:hover {
+    background-color: #c36528;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/cabecalho/mashroomBlack.png" alt="Mushroom logo">
+            <h1>Mush & Room</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Produção</a></li>
+                <li><a href="#">Fornecedores</a></li>
+                <li><a href="#">Compras</a></li>
+                <li><a class="active" href="#">Produtos</a></li>
+                <li><a href="#">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-produto">
+            <h2>Cadastro de Produtos</h2>
+            <form>
+                <label for="nome-produto">Nome do produto</label>
+                <input type="text" id="nome-produto" name="nome-produto">
+
+                <label for="info-produto">Informações do produto</label>
+                <input type="text" id="info-produto" name="info-produto">
+
+                <label for="quantidade-minima">Quantidade mínima</label>
+                <input type="number" id="quantidade-minima" name="quantidade-minima">
+
+                <label for="quantidade-estoque">Quantidade em estoque</label>
+                <input type="number" id="quantidade-estoque" name="quantidade-estoque">
+
+                <div class="buttons">
+                    <button type="reset" class="cancelar">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="produtos">
+            <h2>Produtos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do produto</th>
+                        <th>Informações do produto</th>
+                        <th>Quantidade Mínima</th>
+                        <th>Quantidade em estoque</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cogumelo Shitake</td>
+                        <td>Cogumelo</td>
+                        <td>100</td>
+                        <td>125</td>
+                    </tr>
+                    <tr>
+                        <td>Cogumelo Paris</td>
+                        <td>Cogumelo</td>
+                        <td>150</td>
+                        <td>180</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="action-buttons">
+                <button class="excluir">Excluir produto</button>
+                <button class="alterar">Alterar dados do produto</button>
+                <button class="registrar">Registrar produto</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

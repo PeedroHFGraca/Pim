@@ -5,6 +5,7 @@
     padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 }
 
 header {
-    min-height: 120px;
+    min-height: 100px;
     width: 100%;
     
 }
@@ -45,7 +46,7 @@ header {
 
 #logoEmpresa {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-end;
     font-size: 50%;
 }
 
@@ -68,44 +69,9 @@ nav > a > img {
 
 }
 
-.carossel {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    padding-bottom: 20px;
-}
 
-.carossel > article > img {
-    width: 70%;
-    display: inline-flex;
-    align-items: center;
-    border: 1.5px solid #f39340;
-    border-radius: 15px;
-}
-
-.info {
-    margin-left: 5%;
-    display: inline-flex;
-    background-color: white;
-    border: 1px solid #f39340;
-    border-radius: 15px;
-    width: 50%;
-    padding: 10px;
-    text-justify: auto;
-    text-indent: 2%;
-}
-
-.infoBside {
-    margin-left: 5%;
-    display: inline-flex;
-    background-color: white;
-    border: 1px solid #f39340;
-    border-radius: 15px;
-    width: 30%;
-    padding: 10px;
-    text-justify: auto;
-    text-indent: 2%;
+{
+    
 }
 
 .rodape {
@@ -114,7 +80,7 @@ nav > a > img {
     padding: 20px;
     justify-content: center;
     align-items: flex-end;
-    border-top: 2px solid #FFF2E7;
+    border-top: 1px solid #FFF2E7;
     align-content: center;
 }
 
@@ -129,6 +95,7 @@ nav > a > img {
     height: 47px;
     justify-content: center;
 }
+
 
 /*Outras mídias*/
 @media(max-width: 766px) {
@@ -171,25 +138,4 @@ nav > a > img {
         margin: 0 0 10px;
         font-size: 50%;
     }
-    
-    .carossel > article > img {
-        margin-top: 5%;
-        width: 95%;
-        border-radius: 15px;
-    }
-
-
-
-    .info {
-        display: flex;
-        width: 80%;
-        align-items: center;
-        margin: 0 auto;
-    }
-    .infoBside {
-        display: flex;
-        width: 80%;
-        align-items: center;
-        margin: 10px auto 0;
-    }    
 }

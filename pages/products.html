@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/products.css">
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <div id="logoEmpresa">
+                <img src="/img/cabecalho/mashroomBlack.png" alt="">
+                <h1>Nome da<br> empresa</h1>
+            </div>
+            <nav class="cabecalho-menu">
+                <a href="pim.html" target="_parent">Sobre nós
+                    <img src="/img//cabecalho/mashroomBlack.png" alt="">
+                </a>
+                <a href="products.html" target="_parent">Produtos
+                    <img src="/img/cabecalho/mashromColor.png" alt="">
+                </a>
+                <a href="cart.html" target="_parent">Carrinho
+                    <img src="/img/cabecalho/cart.png" alt="">
+                </a>
+                <a href="profile.html" target="_parent">Dados Cadastrais
+                    <img src="/img/cabecalho/gear.png" alt="">
+                </a>
+            </nav>
+        </div>  
+    </header>
+    <main>
+        <section>
+            <div class="screen">
+                <div class="products">
+                    <img src="/img/produtos/shimeji1.png" alt="">
+                    <p>
+                        SHIMEJI - 
+                             <var></var> Kg 
+                             <br>
+                        QTD: <var></var>  
+                             <br>
+                             <button>+</button> <button>-</button> <br>
+                        VALOR: <var></var> 
+                               <br>
+                               <button>
+                                 <img class="cart" src="/img/cabecalho/cart.png" alt="cart">
+                               </button>
+                     </p>
+                </div>
+                <div class="products">
+                    <img src="/img/produtos/shimeji2.png" alt="">
+                    <p>
+                        SHIMEJI - 
+                             <var></var> Kg 
+                             <br>
+                        QTD: <var></var> 
+                             <br>
+                             <button>+</button> <button>-</button> 
+                             <br>
+                        VALOR: <var></var> 
+                               <br>
+                               <button>
+                                 <img class="cart" src="/img/cabecalho/cart.png" alt="cart">
+                               </button>
+                     </p>
+                </div>
+                <div class="products">
+                    <img src="/img/produtos/shimeji3.png" alt="">
+                    <p>
+                       SHIMEJI - 
+                            <var></var> Kg 
+                            <br>
+                       QTD: <var></var> 
+                            <br>
+                            <button>+</button> <button>-</button> 
+                            <br>
+                       VALOR: <var></var> 
+                              <br>
+                              <button>
+                                <img class="cart" src="/img/cabecalho/cart.png" alt="cart">
+                              </button>
+                    </p>
+                </div>
+                <div class="products">
+                    <img src="/img/produtos/shimeji1.png" alt="">
+                    <p>
+                        SHIMEJI - 
+                             <var></var> Kg <br>
+                        QTD: <var></var> 
+                             <br>
+                             <button>+</button> <button>-</button> 
+                             <br>
+                        VALOR: <var></var> 
+                               <br>
+                               <button>
+                                 <img class="cart" src="/img/cabecalho/cart.png" alt="cart">
+                               </button>
+                     </p>
+                </div>
+                <div class="products">
+                    <img src="/img/produtos/shimeji2.png" alt="">
+                    <p>
+                        Shimeji - R$3,75 Kg 
+                        <br>
+                        Quantidade:
+                             <input type="text" id="peso" class="qtd-kg" value="0" readonly> <!-- readonly para o usuário não inserir valores manualmente -->
+                             <button onclick="adicionar()">+</button>
+                             <button onclick="remover()">-</button>
+                             <br>
+                        Valor Total: R$ <span id="valor"></span>
+                             <br>
+                             <button>
+                                <img class="cart" src="/img/cabecalho/cart.png" alt="cart">
+                             </button>
+                     </p>
+                </div>
+                <div class="products">
+                    <img src="/img/produtos/shimeji3.png" alt="">
+                    <p>
+                        Shimeji - R$3,75 Kg 
+                        <br>
+                        Quantidade:
+                             <input type="text" id="peso" class="qtd-kg" value="0" readonly> <!-- readonly para o usuário não inserir valores manualmente -->
+                             <button onclick="adicionar()">+</button>
+                             <button onclick="remover()">-</button>
+                             <br>
+                        Valor Total: R$ <span id="valor"></span>
+                             <br>
+                             <button>
+                                <img class="cart" src="/img/cabecalho/cart.png" alt="cart">
+                             </button>
+                     </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="rodape">
+            <img class="rodape-imagem" src="/img/cabecalho/mashroomBlack.png" alt="">
+            <h1>Nome da<br> empresa</h1>
+        </div> 
+    </footer>
+
+    
+    <script src="/script/products.js"></script>
+</body>
+</html>
